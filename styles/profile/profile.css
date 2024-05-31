@@ -1,0 +1,22 @@
+/* Форма */
+.profile-edit {
+    width: min(300px, 100%);
+}
+
+.profile-edit > button,
+.profile-edit > input {
+    width: 100%;
+}
+
+
+/* Блок с генерацией картинки */
+.profile-edit__image {
+    align-items: center;
+    margin-right: auto;
+}
+
+.profile-edit__image > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

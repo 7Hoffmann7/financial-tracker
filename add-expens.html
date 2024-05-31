@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Финансовый трекер</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/input.css">
+    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+
+    <link rel="stylesheet" href="./styles/add-expens/add-expens.css">
+    <link rel="stylesheet" href="./styles/add-expens/add-expens-categories.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <article>
+        <nav>
+            <script src="./scripts/nav.js"></script>
+        </nav>
+
+        <section class="flex-col hidden">
+            <h1>Добавление расхода</h1>
+            <form class="flex-col add-expens-form">
+                <div class="flex-row expens-input-row">
+                    <input type="number" id="expens-sum" placeholder="Сумма" required>
+                    <p>₽</p>
+                </div>
+                <p id="expens-balance">Баланс:</p>
+
+                <h4>Выберите категорию</h4>
+                <div class="flex-row categories"></div>
+                
+                <p class="form-error"></p>
+                <button type="submit" id="form-submit">Добавить</button>
+                <button type="button" class="button-red" id="cancel">Отмена</button>
+            </form>
+        </section>
+    </article>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./scripts/add-expens/add-expens-render.js"></script>
+    <script src="./scripts/add-expens/add-expens.js"></script>
+</body>
+</html>

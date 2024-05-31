@@ -1,0 +1,29 @@
+.category {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.category__name {
+    width: 300px;
+}
+
+#new-category-message {
+    visibility: hidden;
+    transition: 0s all;
+}
+
+#new-category-message.show {
+    visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+    .category {
+        width: 100%;
+    }
+
+    .category__name {
+        width: calc(100% - 62px - 44px);
+    }
+}

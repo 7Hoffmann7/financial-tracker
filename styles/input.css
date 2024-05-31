@@ -1,0 +1,28 @@
+input {
+    height: 32px;
+    display: block;
+    padding: 4px;
+
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #b8bdda;
+
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: #16192CBB;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+/* Фикс авто ввода */
+input[type=text]:-webkit-autofill, 
+input[type=text]:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}

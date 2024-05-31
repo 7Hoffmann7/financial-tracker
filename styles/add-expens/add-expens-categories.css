@@ -1,0 +1,48 @@
+h4 {
+    margin-top: 20px;
+}
+
+.categories {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    background-color: transparent;
+}
+
+.category__color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.category__name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    pointer-events: none;
+}
+
+.category-button.selected {
+    background-color: var(--gray-button-hover) !important;
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+	.category-button:hover,
+	.category-button:focus-visible {
+        background-color: #DFDFDF;
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+	.category-button:active {
+        background-color: #DFDFDF;
+    }
+}

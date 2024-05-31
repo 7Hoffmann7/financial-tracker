@@ -1,0 +1,39 @@
+.expenses-wrapper {
+    width: min(400px, 100%);
+}
+
+.expenses-list {
+    width: 100%;
+    min-height: 222px;
+    max-height: 544px;
+    padding: var(--gap);
+    overflow-x: auto;
+    background-color: white;
+    border: 1px solid #c5c5c5;
+    border-radius: var(--border-radius);
+    scrollbar-gutter: stable;
+}
+
+.expenses {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.expenses__color {
+    width: 12px;
+    height: 40px;
+    background-color: rgb(218, 0, 0);
+    border-radius: var(--border-radius);
+}
+
+.expenses__name {
+    /* width: 300px; */
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

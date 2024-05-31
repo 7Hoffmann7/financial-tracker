@@ -1,0 +1,52 @@
+.auth {
+    width: min(300px, 100%);
+    align-items: center;
+    margin: 0 auto;
+}
+
+.auth div form > input,
+.auth div form > button {
+    width: 100%;
+}
+
+/* Блок с входом */
+.login {
+    width: min(300px, 100%);
+}
+
+/* Блок с регистрацией */
+.registration {
+    display: none;
+    width: min(300px, 100%);
+}
+
+
+/* Форма */
+.auth form {
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #c5c5c5;
+    border-radius: var(--border-radius);
+}
+
+/* Переход между форм */
+.auth .login > p,
+.auth .registration > p{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: var(--gap);
+}
+
+/* Блок с генерацией картинки */
+.registration__image {
+    align-items: center;
+    margin-right: auto;
+}
+
+.registration__image > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

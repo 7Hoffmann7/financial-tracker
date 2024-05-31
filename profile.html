@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Финансовый трекер</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/input.css">
+    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+
+    <link rel="stylesheet" href="./styles/profile/profile.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <article>
+        <nav>
+            <script src="./scripts/nav.js"></script>
+        </nav>
+
+        <section>
+            <h1>Профиль</h1>
+        </section>
+
+        <section class="flex-col hidden">
+            <h4>Изменить профиль</h4>
+            <form class="flex-col profile-edit">
+                <div class="profile-edit__image flex-row">
+                    <p>Фото профиля</p>
+                    <img src="./assets/icons/blank.svg" alt="edit-image" id="edit-image">
+                    <button type="button" class="button-gray button-image" id="edit-image-new"><img src="./assets/icons/update.svg" alt="update"></button>
+                </div>
+                <input type="text" id="edit-name" placeholder="Имя профиля" maxlength="32">
+                <p class="form-error"></p>
+                <button type="submit" id="form-submit">Сохранить</button>
+            </form>
+        </section>
+
+        <section class="flex-col hidden">
+            <h4>Выход из профиля</h4>
+            <button class="button-red" id="profile-exit">Выйти из профиля</button>
+        </section>
+    </article>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./scripts/profile/profile-render.js"></script>
+    <script src="./scripts/profile/profile-edit.js"></script>
+    <script src="./scripts/profile/profile-exit.js"></script>
+</body>
+</html>

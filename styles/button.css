@@ -1,0 +1,91 @@
+:root {
+    --blue-button: #0E4CD3;
+    --blue-button-hover: #1257EC;
+	--gray-button: #E4E4E4;
+    --gray-button-hover: #C7C7C7;
+	--red-button: #FF5151;
+    --red-button-hover: #FF2525;
+}
+
+/* Стили для всех кнопок */
+button, .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	width: fit-content;
+	min-height: 32px;
+	padding: 0 20px;
+
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+
+	outline: none;
+	border: none;
+	border-radius: var(--border-radius);
+	background-color: var(--blue-button);
+
+	overflow: hidden;
+	user-select: none;
+	cursor: pointer;
+}
+
+.button-image {
+	width: 32px;
+	height: 32px;
+	padding: 0;
+}
+
+/* Серая кнопка */
+.button-gray {
+	background-color: var(--gray-button);
+	color: var(--dark-blue);
+}
+
+/* Красная кнопка */
+.button-red {
+	background-color: var(--red-button);
+}
+
+/* Недоступная кнопка */
+button:disabled {
+	background-color:gray !important;
+	cursor: not-allowed;
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+	button:hover,
+	button:focus-visible,
+	.button:hover,
+	.button:focus-visible {
+		background-color: var(--blue-button-hover);
+    }
+
+	.button-gray:hover,
+	.button-gray:focus-visible {
+		background-color: var(--gray-button-hover);
+	}
+
+	.button-red:hover,
+	.button-red:focus-visible {
+		background-color: var(--red-button-hover);
+	}
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+	button:active,
+	.button:active {
+		background-color: var(--blue-button-hover);
+    }
+
+	.button-gray:active {
+		background-color: var(--gray-button-hover);
+	}
+
+	.button-red:active {
+		background-color: var(--red-button-hover);
+	}
+}

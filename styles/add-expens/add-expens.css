@@ -1,0 +1,20 @@
+.add-expens-form {
+    width: min(500px, 100%);
+}
+
+.add-expens-form > button {
+    width: min(300px, 100%);
+}
+
+/* Строка с валютой */
+.expens-input-row   {
+    align-items: center;
+}
+
+.expens-input-row input {
+    width: min(270px, 100%);
+}
+
+.expens-input-row  p {
+    font-size: 24px;
+}

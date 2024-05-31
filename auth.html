@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Финансовый трекер</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/input.css">
+    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+
+    <link rel="stylesheet" href="./styles/auth/auth.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <article>
+        <nav>
+            <script src="./scripts/nav.js"></script>
+        </nav>
+
+        <section class="auth flex-col">
+            <div class="login">
+                <form class="flex-col">
+                    <h1>Вход</h1>
+                    <input type="email" id="login-email" placeholder="Email" maxlength="64" required>
+                    <input type="password" id="login-password" placeholder="Пароль" maxlength="32" required>
+                    <p class="form-error"></p>
+                    <button type="submit">Войти</button>
+                </form>
+                <p tabindex="0" id="go-to-registration">Перейти на регистрацию</p>
+            </div>
+            
+            <div class="registration">
+                <form class="flex-col">
+                    <h1>Регистрация</h1>
+                    
+                    <div class="registration__image flex-row">
+                        <p>Фото профиля</p>
+                        <img src="./assets/icons/blank.svg" alt="reg-image" id="reg-image">
+                        <button type="button" class="button-gray button-image" id="reg-image-new"><img src="./assets/icons/update.svg" alt="update"></button>
+                    </div>
+
+                    <input type="text" id="reg-name" placeholder="Имя профиля" maxlength="32" required>
+                    <input type="email" id="reg-email" placeholder="Email" maxlength="64" required>
+                    <input type="password" id="reg-password" placeholder="Пароль" maxlength="32" required>
+                    <input type="password" id="reg-password-again" placeholder="Повторите пароль" maxlength="32" required>
+                    <p class="form-error"></p>
+                    <button type="submit">Создать аккаунт</button>
+                </form>
+                <p tabindex="0" id="go-to-login">Перейти на вход</p>
+            </div>
+        </section>
+    </article>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./scripts/auth/auth-nav.js"></script>
+    <script src="./scripts/auth/login.js"></script>
+    <script src="./scripts/auth/reg.js"></script>
+</body>
+</html>

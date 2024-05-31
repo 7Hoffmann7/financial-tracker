@@ -1,0 +1,22 @@
+/* Форма с балансом */
+.balance-form {
+    width: min(300px, 100%);
+}
+
+.balance-form > input,
+.balance-form > button {
+    width: 100%;
+}
+
+/* Строка с валютой */
+.balance-row  {
+    align-items: center;
+}
+
+.balance-row input {
+    flex: 1;
+}
+
+.balance-row p {
+    font-size: 24px;
+}

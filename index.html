@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Финансовый трекер</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/input.css">
+    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+    <link rel="stylesheet" href="./styles/home/home.css">
+    <link rel="stylesheet" href="./styles/home/home-balance.css">
+    <link rel="stylesheet" href="./styles/home/home-categories.css">
+    <link rel="stylesheet" href="./styles/home/home-expenses.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <article>
+        <nav>
+            <script src="./scripts/nav.js"></script>
+        </nav>
+
+        <section>
+            <h1>Расходы</h1>
+        </section>
+
+        <section id="reminder" class="hidden">
+            <p>Войдите что бы увидеть свои расходы</p>
+        </section>
+
+        <section class="hidden">
+            <a href="./add-expens.html" class="button">Добавить расход</a>
+        </section>
+
+        <section class="flex-col hidden">
+            <h4>Баланс</h4>
+            <div class="balance balance_gray">
+                <p class="balance__title">Доступно</p>
+                <p class="balance__text"></p>
+            </div>
+            <a href="./balance.html" class="button">Изменить</a>
+        </section>
+
+        <section class="flex-row home-section_wide hidden">
+            <div class="flex-col expenses-wrapper">
+                <h4>Список расходов</h4>
+                <div class="flex-col expenses-list">
+                    <div class="expenses">
+                        <div class="expenses__color"></div>
+                        <div class="expenses__name">НазваниеКатегории</div>
+                        <div class="expenses__prise">6000 ₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-col categories-wrapper">
+                <h4>Расходы по категориям</h4>
+                <div class="flex-col categories-list"></div>
+            </div>
+        </section>
+    </article>
+
+    <script src="./scripts/home/home-render.js"></script>
+</body>
+</html>
