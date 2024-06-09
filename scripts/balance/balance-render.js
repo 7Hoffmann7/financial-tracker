@@ -4,4 +4,5 @@ if (!userData) {
     $("section").removeClass("hidden")
 
     $("#balance-input").val(userData.balance);
+    $("#balance-input-currency").text(userData.currency);
 }

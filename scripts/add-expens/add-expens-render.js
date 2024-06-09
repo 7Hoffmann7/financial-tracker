@@ -3,7 +3,9 @@ if (!userData) {
 } else {
     $("section").removeClass("hidden")
 
-    $("#expens-balance").text(`Баланс: ${userData.balance} ₽`)
+    $("#expens-sum-currency").text(userData.currency) // Символ валюты после поля с суммой
+    $("#expens-balance").text(`Баланс: ${userData.balance} ${userData.currency}`) // Баланс
+    
     renderCategories(userData.categories)
 }
 

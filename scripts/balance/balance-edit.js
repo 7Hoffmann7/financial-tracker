@@ -14,7 +14,7 @@ $(".balance-form").on("submit", (event) => {
         if (balance.length === 0) {
             balance = 0
         } else {
-            balance = parseInt(balance)
+            balance = parseFloat(balance)
         }
 
         resolve(balance)
@@ -25,7 +25,7 @@ $(".balance-form").on("submit", (event) => {
 
         // Обновляем данные
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=EditUser",
+            url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=EditUser",
             method: "POST",
             crossDomain: true,
             data: {data: JSON.stringify(userData)},
@@ -34,7 +34,7 @@ $(".balance-form").on("submit", (event) => {
 
                 // Если ошибка обновления
                 if (!data.success) {
-                    alert("Не удалось сохранить изменение, пожалуйста обновите страницу")
+                    $(".form-error").text("Не удалось сохранить изменение, пожалуйста обновите страницу").show()
                     $("#form-submit").text("Сохранить").removeAttr("disabled") // Разблокируем кнопку
                     return
                 }

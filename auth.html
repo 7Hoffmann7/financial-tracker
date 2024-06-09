@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./styles/button.css">
     <link rel="stylesheet" href="./styles/nav.css">
 
-
     <link rel="stylesheet" href="./styles/auth/auth.css">
 
     <!-- jQuery -->
@@ -50,6 +49,16 @@
                     <input type="email" id="reg-email" placeholder="Email" maxlength="64" required>
                     <input type="password" id="reg-password" placeholder="Пароль" maxlength="32" required>
                     <input type="password" id="reg-password-again" placeholder="Повторите пароль" maxlength="32" required>
+
+                    <div class="flex-row reg-currency__wrapper">
+                        <label for="reg-currency">Выберите валюту</label>
+                        <select id="reg-currency" name="reg-currency">
+                            <option value="₽">Рубль (₽)</option>
+                            <option value="$">Доллар ($)</option>
+                            <option value="€">Евро (€)</option>
+                        </select>
+                    </div>
+
                     <p class="form-error"></p>
                     <button type="submit">Создать аккаунт</button>
                 </form>

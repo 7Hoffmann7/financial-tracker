@@ -28,8 +28,8 @@
 
             <form class="flex-col balance-form">
                 <div class="flex-row balance-row">
-                    <input type="number" id="balance-input" placeholder="Ваш баланс" required>
-                    <p>₽</p>
+                    <input type="number" step="0.01" id="balance-input" placeholder="Ваш баланс" required>
+                    <p id="balance-input-currency"></p>
                 </div>
                 <p class="form-error"></p>
                 <button type="submit" id="form-submit">Сохранить</button>

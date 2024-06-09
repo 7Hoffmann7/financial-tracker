@@ -1,6 +1,6 @@
 input {
-    height: 32px;
     display: block;
+    height: 32px;
     padding: 4px;
 
     outline: none;
@@ -25,4 +25,15 @@ input.error {
 input[type=text]:-webkit-autofill, 
 input[type=text]:-webkit-autofill:focus {
     transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+select {
+    display: block;
+    height: 32px;
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #b8bdda;
+    color: var(--dark-blue);
+    font-weight: 500;
 }

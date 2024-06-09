@@ -1,10 +1,12 @@
 /* Форма */
-.profile-edit {
+.profile-edit,
+.profile-edit-currency {
     width: min(300px, 100%);
 }
 
 .profile-edit > button,
-.profile-edit > input {
+.profile-edit > input,
+.profile-edit-currency > button {
     width: 100%;
 }
 
@@ -19,4 +21,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+/* Смена валюты */
+.profile-edit-currency__wrapper {
+    align-items: center;
 }

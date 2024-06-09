@@ -29,7 +29,7 @@ $(".category__add").on("click tap", () => {
 
     // Обновляем данные
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=EditUser",
+        url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=EditUser",
         method: "POST",
         crossDomain: true,
         data: {data: JSON.stringify(userData)},
@@ -76,7 +76,7 @@ $(".categories").on("click tap", ".category__remove", (event) => {
 
     // Обновляем данные
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=EditUser",
+        url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=EditUser",
         method: "POST",
         crossDomain: true,
         data: {data: JSON.stringify(userData)},
@@ -113,7 +113,7 @@ $(".categories").on("change", "input", (event) => {
 
     // Обновляем данные
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=EditUser",
+        url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=EditUser",
         method: "POST",
         crossDomain: true,
         data: {data: JSON.stringify(userData)},

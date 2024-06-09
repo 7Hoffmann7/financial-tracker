@@ -6,13 +6,13 @@ $(".add-expens-form").on("submit", (event) => {
     new Promise((resolve, reject) => {
         if (sum.startsWith("-")) return reject("Сумма не должна начинаться с минуса")
         if (sum.length > 15) return reject("Сумма не может превышать 15 цифр")
-        if (sum.length !== 1 && sum.startsWith("0")) return reject("Сумма не может начинаться с 0")
+        // if (sum.length !== 1 && sum.startsWith("0")) return reject("Сумма не может начинаться с 0")
         if (isNaN(sum)) return reject("Сумма должен содержать только число")
 
         if (sum.length === 0) {
             sum = 0
         } else {
-            sum = parseInt(sum)
+            sum = parseFloat(sum)
         }
 
         resolve(sum)
@@ -20,8 +20,8 @@ $(".add-expens-form").on("submit", (event) => {
     .then(sum => {
         $("#form-submit").text("Сохранение").attr("disabled", true) // Блокируем кнопку
 
-        // Меняем данные пользователя
-        userData.balance = userData.balance - sum
+        // Меняем баланс пользователя
+        userData.balance = (userData.balance - sum).toFixed(2)
 
         // Новое id - следующее после последнего элемента
         let categoryId = $(".category-button.selected").attr("id").replace("category-", "")
@@ -41,7 +41,7 @@ $(".add-expens-form").on("submit", (event) => {
 
         // Обновляем данные
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=EditUser",
+            url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=EditUser",
             method: "POST",
             crossDomain: true,
             data: {data: JSON.stringify(userData)},

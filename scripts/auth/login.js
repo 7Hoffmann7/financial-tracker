@@ -13,7 +13,7 @@ $(".login form").on("submit", (event) => {
     .then(formData => {
         // Получаем данные аккаунта
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=GetUser",
+            url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=GetUser",
             method: "POST",
             crossDomain: true,
             data: formData,

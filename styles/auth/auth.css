@@ -50,3 +50,8 @@
     height: 40px;
     border-radius: 50%;
 }
+
+/* Контейнер с выбором валюты */
+.reg-currency__wrapper {
+    align-items: center;
+}

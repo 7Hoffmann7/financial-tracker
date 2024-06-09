@@ -6,7 +6,7 @@ if (!userData) {
 
 
     // Отображение баланса
-    $(".balance__text").text(userData.balance + " ₽")
+    $(".balance__text").text(`${userData.balance} ${userData.currency}`)
     if (userData.balance > 0) {
         $(".balance").removeClass("balance_gray").addClass("balance_green")
     }
@@ -31,7 +31,7 @@ function renderExpenses(expenses) {
             <div class="expenses" id="expens-${expens.id}">
                 <div class="expenses__color" style="background-color: ${category.color};"></div>
                 <div class="expenses__name">${category.name}</div>
-                <div class="expenses__prise">${expens.sum} ₽</div>
+                <div class="expenses__prise">${expens.sum} ${userData.currency}</div>
             </div>
         `)
     })
@@ -72,7 +72,7 @@ function renderCategories(expenses) {
                 <div class="category__color" style="background-color: ${category.color};"></div>
                 <p class="category__name">${category.name}</p>
                 <div class="flex-col category__prise">
-                    <p>${category.sum} <span>₽</span></p>
+                    <p>${category.sum} <span>${userData.currency}</span></p>
                     <p>${category.percent.toFixed(1)} <span>%</span></p>
                 </div>
             </div>

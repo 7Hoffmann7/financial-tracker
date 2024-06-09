@@ -30,11 +30,12 @@ $(".registration form").on("submit", (event) => {
             ],
             expenses: [],
             balance: 0,
+            currency: $("#reg-currency").val()
         }
 
         // Регистрируем новый аккаунт
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxxxdLPIglnlPfLzPd3OqRFM8tGav0hVQcgr7xJq18tYmQly0FxTdz5mo_eZFTe2r_xJg/exec" + "?action=AddUser",
+            url: "https://script.google.com/macros/s/AKfycbweKtNAk0_Q-8CdsYkv3JZpfEq6bfDkpVn9GjwxIUVUnoJpFmEr9zzB9l6z1LvNycoYXA/exec" + "?action=AddUser",
             method: "POST",
             crossDomain: true,
             data: {data: JSON.stringify(newUserData)},

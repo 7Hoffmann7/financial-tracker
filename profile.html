@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./styles/button.css">
     <link rel="stylesheet" href="./styles/nav.css">
 
-
     <link rel="stylesheet" href="./styles/profile/profile.css">
 
     <!-- jQuery -->
@@ -38,7 +37,25 @@
                 </div>
                 <input type="text" id="edit-name" placeholder="Имя профиля" maxlength="32">
                 <p class="form-error"></p>
-                <button type="submit" id="form-submit">Сохранить</button>
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+
+        <section class="flex-col hidden">
+            <h4>Изменить валюту</h4>
+            <form class="flex-col profile-edit-currency">
+                <p id="profile-currency-current">Текущая валюта: </p>
+                <div class="flex-row profile-edit-currency__wrapper">
+                    <label for="profile-currency">Выберите новую валюту</label>
+                    <select id="profile-currency" name="profile-currency">
+                        <option value="₽">Рубль (₽)</option>
+                        <option value="$">Доллар ($)</option>
+                        <option value="€">Евро (€)</option>
+                    </select>
+                </div>
+                <p>Внимание! Смена валюты приведет к удалению всех расходов и к сбросу вашего баланса!</p>
+                <p class="form-error"></p>
+                <button type="submit">Изменить</button>
             </form>
         </section>
 
@@ -47,10 +64,6 @@
             <button class="button-red" id="profile-exit">Выйти из профиля</button>
         </section>
     </article>
-
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="./scripts/profile/profile-render.js"></script>
     <script src="./scripts/profile/profile-edit.js"></script>
